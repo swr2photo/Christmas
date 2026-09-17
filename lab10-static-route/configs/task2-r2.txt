@@ -1,0 +1,16 @@
+enable
+configure terminal
+no ip domain-lookup
+hostname R2
+interface serial 0/3/0
+ ip address 192.168.1.2 255.255.255.0
+ no shutdown
+ exit
+interface gigabitEthernet 0/0
+ ip address 192.168.30.1 255.255.255.0
+ no shutdown
+ exit
+ip route 192.168.10.0 255.255.255.0 192.168.1.1
+ip route 192.168.20.0 255.255.255.0 192.168.1.1
+end
+write memory

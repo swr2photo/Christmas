@@ -1,0 +1,22 @@
+Task 1 (Single Router)
+  A  IP 192.168.10.2  Mask 255.255.255.0  GW 192.168.10.1
+  B  IP 192.168.10.3  Mask 255.255.255.0  GW 192.168.10.1
+  C  IP 192.168.20.2  Mask 255.255.255.0  GW 192.168.20.1
+  D  IP 192.168.20.3  Mask 255.255.255.0  GW 192.168.20.1
+
+Task 2 (Two Routers)
+  A  IP 192.168.10.2  Mask 255.255.255.0  GW 192.168.10.1
+  B  IP 192.168.20.2  Mask 255.255.255.0  GW 192.168.20.1
+  C  IP 192.168.30.2  Mask 255.255.255.0  GW 192.168.30.1
+
+Task 3 (Three Routers)
+  A  IP 192.168.10.2  Mask 255.255.255.0  GW 192.168.10.1
+  B  IP 192.168.20.2  Mask 255.255.255.0  GW 192.168.20.1
+
+Packet Tracer notes:
+  - Router: 2911
+  - Switch: Switch-PT
+  - PC: PC-PT
+  - Task 2/3: add HWIC-2T on each 2911 (Physical tab, power off, drag HWIC-2T into a slot, power on)
+  - Serial DCE side needs "clock rate 64000" (R1 Se0/3/0, and in Task 3 also R2 Se0/3/1)
+  - Connect serial with Serial DCE cable; Copper Straight-Through for PC-Switch and Switch-Router
