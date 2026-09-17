@@ -1,0 +1,17 @@
+enable
+configure terminal
+no ip domain-lookup
+hostname R2
+interface serial 0/3/0
+ ip address 192.168.1.2 255.255.255.0
+ no shutdown
+ exit
+interface serial 0/3/1
+ ip address 192.168.2.1 255.255.255.0
+ clock rate 64000
+ no shutdown
+ exit
+ip route 192.168.10.0 255.255.255.0 192.168.1.1
+ip route 192.168.20.0 255.255.255.0 192.168.2.2
+end
+write memory
